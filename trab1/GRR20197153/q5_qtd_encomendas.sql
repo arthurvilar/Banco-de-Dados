@@ -24,3 +24,8 @@ group by
     N_NAME 
 order by 
     QTD_ENCOMENDAS desc;
+
+------------------------------------------------------------------------------------------------------------------------------------------
+select O_CUSTKEY, count(*) from (select O_ORDERKEY, O_CUSTKEY from ORDERS order by O_CUSTKEY) group by O_CUSTKEY;
+
+select C_NATIONKEY, PEDIDOS from (select O_CUSTKEY, count(*) as PEDIDOS from (select O_ORDERKEY, O_CUSTKEY from ORDERS order by O_CUSTKEY) group by O_CUSTKEY) inner join CUSTOMER on O_CUSTKEY = CUSTOMER.C_CUSTKEY;

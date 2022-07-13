@@ -3,9 +3,13 @@
 ### Questão 1  
 
 AFRICA
+
 AMERICA
+
 ASIA
+
 EUROPE
+
 MIDDLE EAST
 
 ### Questão 2

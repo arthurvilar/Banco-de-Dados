@@ -1,10 +1,10 @@
 select count(*) 
 	from (
-		select c_custkey 
-			from customer 
+		select o_custkey 
+			from orders 
 		except 
-		select c_custkey 
-			from customer, orders 
+		select o_custkey 
+			from orders, customer 
 		where c_custkey = o_custkey 
 			and o_comment like '%special request%'
 	);
